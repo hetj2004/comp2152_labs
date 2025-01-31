@@ -89,7 +89,6 @@ monster_power = {
     "Super Hearing": 6,
 }
 
-
 # Define the number of stars awarded to the Player
 num_stars = 0
 
@@ -159,6 +158,16 @@ print("--- You are matched in strength: " + str(combat_strength == m_combat_stre
 
 # Check the Player's overall strength and health
 print("--- You have a strong player: " + str((combat_strength + health_points) >= 15))
+
+# Lab 04 - 02
+# Roll for the Monster's Power
+input("Roll for thhe Monster's Magic Power (Press Enter)")
+power_roll = random.choice(["Fire Magic", "Frezzing Time", "Super Hearing"])
+
+# Lab 04 - 03
+# Increase the Monster Combat Strength by it's Power.
+m_combat_strength = min(6, m_combat_strength + monster_power[power_roll])
+print("The Monster Combat Strength is no "+ str(combat_strength) + "Using the " + power_roll + " magic power.")
 
 # Loop while the monster and the player are alive. Call fight sequence functions
 print("You meet the monster. FIGHT!!")
